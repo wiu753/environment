@@ -1,9 +1,6 @@
 # Environment
 Minimal step by step guide to setting up my work environment.
 
-## Why?
-Help me not change my environment all the time.
-
 ## Overview
 - Browser
 - Windows
