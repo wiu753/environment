@@ -13,6 +13,7 @@ Minimal step by step guide to setting up my work environment.
 
 ## Terminal
 1. Download [Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/install).
+2. Remove `ctrl + alt + 1/2/3...` to be able to type `@£$€{[]}`.
 
 ## Windows
 1. Download [powertoys](https://learn.microsoft.com/en-us/windows/powertoys/install).
@@ -47,3 +48,10 @@ Minimal step by step guide to setting up my work environment.
 3. Run `git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim`.
 4. Run `vim` to start installing.
 5. Run `vim ~/.config/nvim/init.lua`.
+6. Configure or copy from [here](./init.lua).
+7. Run `sudo apt-get install -y dotnet-sdk-8.0`.
+
+### Tmux
+1. Run `touch ~/.tmux.conf` and enter [this](./.tmux.conf).
+2. Run `source ~/.tmux.conf`.
+
