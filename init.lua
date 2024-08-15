@@ -26,7 +26,7 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-vim.keymap.set('n', 'f', ':HopWord<CR>')
+vim.keymap.set('n', 'f', ':HopWord<CR>', { desc = 'Hop to any word' })
 
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
@@ -46,10 +46,11 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Center focus when going up' })
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center focus when going down' })
 
-vim.keymap.set('n', '<A-j>', ':m .+1<CR>==') -- move line up(n)
-vim.keymap.set('n', '<A-k>', ':m .-2<CR>==') -- move line down(n)
-vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv") -- move line up(v)
-vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv") -- move line down(v)
+vim.keymap.set('n', '<A-j>', ':m .+1<CR>==', { desc = 'Move line up' })
+vim.keymap.set('n', '<A-k>', ':m .-2<CR>==', { desc = 'Move line down' })
+
+vim.keymap.set('n', '<C-j>', '5j', { desc = 'Move 5 lines down' })
+vim.keymap.set('n', '<C-k>', '5k', { desc = 'Move 5 lines up' })
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
@@ -646,7 +647,7 @@ require('lazy').setup({
   --
   -- require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
-  require 'kickstart.plugins.lint',
+  -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
