@@ -55,3 +55,8 @@ Minimal step by step guide to setting up my work environment.
 1. Run `touch ~/.tmux.conf` and enter [this](./.tmux.conf).
 2. Run `source ~/.tmux.conf`.
 
+### Tmuxifier
+1. Run `git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier`.
+2. Add `export PATH="$HOME/.tmuxifier/bin:$PATH"` to your path.
+3. Add [this](./work.session.sh) file to `~/.tmuxifier/layouts`.
+4. Run `tmuxifier load-session work` when starting to work.
