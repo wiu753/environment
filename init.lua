@@ -48,9 +48,13 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Center focus when going down' 
 
 vim.keymap.set('n', '<A-j>', ':m .+1<CR>==', { desc = 'Move line up' })
 vim.keymap.set('n', '<A-k>', ':m .-2<CR>==', { desc = 'Move line down' })
+vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", { desc = 'Move lines up' })
+vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", { desc = 'Move lines down' })
 
 vim.keymap.set('n', '<C-j>', '5j', { desc = 'Move 5 lines down' })
 vim.keymap.set('n', '<C-k>', '5k', { desc = 'Move 5 lines up' })
+
+vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = 'Save' })
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
@@ -98,12 +102,11 @@ require('lazy').setup({
       require('which-key').setup()
 
       -- Document existing key chains
-      require('which-key').register {
+      require('which-key').add {
         { '<leader>c', group = '[C]ode' },
         { '<leader>d', group = '[D]ocument' },
         { '<leader>r', group = '[R]ename' },
         { '<leader>s', group = '[S]earch' },
-        { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       }
