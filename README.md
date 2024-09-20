@@ -25,7 +25,7 @@ Minimal step by step guide to setting up my work environment
 ## WSL2
 1. Download [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
 2. Run `wsl.exe --install` in PowerShell
-3. Set Ubuntu as the default profile in Windows Terminal.
+3. Set Ubuntu as the default profile in Windows Terminal
 4. Run `sudo apt install zsh`
 5. Run `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 6. Download the [Hack Nerd Font](https://www.nerdfonts.com/font-downloads) and select it as the font face for the Ubuntu profile
