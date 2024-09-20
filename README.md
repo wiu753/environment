@@ -43,13 +43,14 @@ Minimal step by step guide to setting up my work environment.
 2. Run `gh auth login` and complete the login.
 
 ### Neovim
-1. Run `sudo apt install git gcc ripgrep unzip make`.
-2. Run `mkdir ~/.config" and "mkdir ~/.config/nvim`.
-3. Run `git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim`.
-4. Run `vim` to start installing.
-5. Run `vim ~/.config/nvim/init.lua`.
-6. Configure or copy from [here](./init.lua).
-7. Run `sudo apt-get install -y dotnet-sdk-8.0`.
+1. Run `sudo apt update`
+2. Run `sudo apt install git gcc ripgrep unzip make`.
+3. Run `mkdir ~/.config" and "mkdir ~/.config/nvim`.
+4. Run `git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim`.
+5. Run `vim` to start installing.
+6. Run `vim ~/.config/nvim/init.lua`.
+7. Configure or copy from [here](./init.lua).
+8. Run `sudo apt-get install -y dotnet-sdk-8.0`.
 
 ### Tmux
 1. Run `touch ~/.tmux.conf` and enter [this](./.tmux.conf).
