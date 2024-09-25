@@ -45,12 +45,14 @@ Minimal step by step guide to setting up my work environment
 ### Neovim
 1. Run `sudo apt update`
 2. Run `sudo apt install git gcc ripgrep unzip make`
-3. Run `mkdir ~/.config" and "mkdir ~/.config/nvim`
-4. Run `git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim`
-5. Run `vim` to start installing
-6. Run `vim ~/.config/nvim/init.lua`
-7. Configure or copy from [here](./init.lua)
-8. Run `sudo apt-get install -y dotnet-sdk-8.0`
+3. Run `mkdir ~/.config`
+4. Fork `https://github.com/nvim-lua/kickstart.nvim`
+5. Run `git clone https://github.com/[your username]/[name of your fork].git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim`
+6. Follow any other installation instruction from the `README.md`
+7. Run `vim` to start installing
+8. Run `vim ~/.config/nvim/init.lua`
+9. Configure `init.lua` to your liking
+10. Run `sudo apt-get install -y dotnet-sdk-8.0`
 
 ### Tmux
 1. Run `touch ~/.tmux.conf` and enter [this](./.tmux.conf)
